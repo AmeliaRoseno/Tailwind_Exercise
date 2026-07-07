@@ -56,7 +56,33 @@
     <body>
       <header>
           <!-- nav bar starts-->
-          <!-- nav bar ends-->
+          <header class="bg-gray-500 px-6 py-4">
+           <div class="flex items-center justify-between">
+             <button class="bg-white text-sm px-4 py-2 rounded-sm shadow-sm">
+             Your cool product
+             </button>
+          
+             <nav class="hidden md:flex items-center gap-3">
+              <a href="#" class="bg-white text-sm px-4 py-2 rounded-sm shadow-sm">Home</a>
+              <a href="#" class="bg-white text-sm px-4 py-2 rounded-sm shadow-sm">Features</a>
+              <a href="#" class="bg-white text-sm px-4 py-2 rounded-sm shadow-sm">Price</a>
+              <a href="#" class="bg-white text-sm px-4 py-2 rounded-sm shadow-sm">Try for free</a>
+              </nav>
+
+             <button id="menu-toggle" class="md:hidden flex flex-col justify-center items-center gap-1.5 w-9 h-9" aria-label="Toggle menu" aria-expanded="false">
+              <span class="block w-6 h-0.5 bg-white"></span>
+              <span class="block w-6 h-0.5 bg-white"></span>
+              <span class="block w-6 h-0.5 bg-white"></span>
+             </button>
+
+             <nav id="mobile-menu" class="md:hidden hidden flex-col gap-3 mt-4">
+              <a href="#" class="bg-white text-sm px-4 py-2 rounded-sm shadow-sm text-center">Home</a>
+              <a href="#" class="bg-white text-sm px-4 py-2 rounded-sm shadow-sm text-center">Features</a>
+              <a href="#" class="bg-white text-sm px-4 py-2 rounded-sm shadow-sm text-center">Prices</a>
+              <a href="#" class="bg-white text-sm px-4 py-2 rounded-sm shadow-sm text-center">Try for free</a>
+             </nav>
+            </div>
+            <!-- nav bar ends-->
       </header>
       <main>
 
@@ -64,10 +90,43 @@
             <!-- hero starts-->
             <!-- hero ends-->
             <!-- TRUSTED BY SECTION starts -->
+            <div class="flex flex-col gap-4 p-16 items-center">
+            <p class="text-center text-base"> Trusted by companies like:</p>
+            <section class="flex md:max-w-3/4 mx-auto flex-row gap-8 pl-24 pr-24">
+              <img class="flex-1 min-w-0" src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" alt="logo1">
+              <img class="flex-1 min-w-0" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/ABC_2021_Invert.svg/1920px-ABC_2021_Invert.svg.png" alt="logo2">
+              <img class="flex-1 min-w-0" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKOvfAJ8r7cRyG3i1CXRLWFACvptjKW6EKUzG3rpVnxA&s" alt="logo3">
+              <img class="flex-1 min-w-0" src="https://upload.wikimedia.org/wikipedia/commons/0/0e/ARMEDANGELS-A_Logo.jpg" alt="logo4">
+              <img class="flex-1 min-w-0" src="https://cdn.worldvectorlogo.com/logos/bmw-logo.svg" alt="logo5">
+            </section>
+            </div>
             <!-- TRUSTED BY SECTION ends-->
             <!-- video starts -->
             <!-- video ends-->
             <!-- AWESOME FEATURES SECTION starts -->
+            <section class="bg-violet-100 pt-16 pb-16">
+            <section class="pb-4">
+              <h2 class="text-3xl text-center pb-4">Our Okay-ish Features</h2>
+              <p class="text-sm text-center">From smart search to real-time sync, our tools work together so you can focus on what matters most.</p>
+            </section>
+            <section class="flex gap-4 p-4">
+            <div class="card bg-violet-300 rounded-lg p-4">
+              <h2 class="text-lg text-center pb-4">Smart Search</h2>
+              <img class="rounded-lg" src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="feature1">
+              <p class="text-sm pt-4">Quickly find exactly what you need with filters that adapt to your preferences in real time.</p>
+          </div>
+          <div class="card bg-violet-300 rounded-lg p-4">
+              <h2 class="text-lg text-center pb-4">Seamless Sync</h2>
+              <img class="rounded-lg" src="https://images.unsplash.com/photo-1513595207829-9f414c0665f6?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="feature1">
+              <p class="text-sm pt-4">Your data stays up to date across every device, automatically and without extra steps.</p>
+          </div>
+          <div class="card bg-violet-300 rounded-lg p-4">
+            <h2 class="text-lg text-center pb-4">Custom Dashboards</h2>
+            <img class="rounded-lg" src="https://images.unsplash.com/photo-1609921141835-710b7fa6e438?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="feature3">
+            <p class="text-sm pt-4">Build a workspace that fits the way you work, with widgets you can rearrange anytime.</p>
+          </div>
+        </section>
+        </section>
             <!-- AWESOME FEATURES SECTION ends-->
             <!-- why us starts -->
             <!-- why us ends-->            
