@@ -1,56 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
-
-    @theme {
-      /* Custom brand colors matching the original style.css */
-      --color-brand: #4f46e5;       /* indigo - matches original accent */
-      --color-brand-dark: #4338ca;
-      --color-success: #22c55e;     /* green - matches original price-btn */
-    }
-
-    @layer components {
-
-      /* ---- WHY US SECTION ---- */
-      .whyus-icon {
-        @apply w-16 h-16 rounded-full mx-auto mb-4;
-      }
-
-      .whyus-card {
-        @apply flex flex-col items-center text-center max-w-[260px];
-      }
-
-      /* ---- PRICING SECTION ---- */
-      .pricing-card {
-        @apply bg-white flex flex-col items-center px-6 py-8 w-64
-               shadow-[0_0_0_1px_#d1d5db];
-      }
-
-      /* The highlighted middle card - lifted up with a colored top border */
-      .pricing-card--highlight {
-        @apply -translate-y-3 border-t-[6px] border-brand
-               shadow-[0_10px_20px_rgba(79,70,229,0.25)];
-      }
-
-      .price-tag {
-        @apply text-4xl font-bold text-brand my-3;
-      }
-
-      .price-desc {
-        @apply text-sm text-gray-500 mb-6;
-      }
-
-      .price-btn {
-        @apply bg-success hover:bg-green-600 text-white
-               px-5 py-2 cursor-pointer transition-colors duration-200;
-      }
-
-    }
-  </style>
   </head>
   <body>
     <body>
@@ -131,7 +84,55 @@
             <!-- why us starts -->
             <!-- why us ends-->            
             <!-- pricing starts -->
-            <section class="bg-gray-200 py-16 px-10">
+
+            <style type="text/tailwindcss">
+
+            @theme {
+              /* Custom brand colors matching the original style.css */
+              --color-brand: #4f46e5;       /* indigo - matches original accent */
+              --color-brand-dark: #4338ca;
+              --color-success: #22c55e;     /* green - matches original price-btn */
+            }
+
+            @layer components {
+
+              /* ---- WHY US SECTION ---- */
+              .whyus-icon {
+                @apply w-16 h-16 rounded-full mx-auto mb-4;
+              }
+
+              .whyus-card {
+                @apply flex flex-col items-center text-center max-w-[260px];
+              }
+
+              /* ---- PRICING SECTION ---- */
+              .pricing-card {
+                @apply bg-white flex flex-col items-center px-6 py-8 w-64
+                      shadow-[0_0_0_1px_#d1d5db];
+              }
+
+              /* The highlighted middle card - lifted up with a colored top border */
+              .pricing-card--highlight {
+                @apply -translate-y-3 border-t-[6px] border-brand
+                      shadow-[0_10px_20px_rgba(79,70,229,0.25)];
+              }
+
+              .price-tag {
+                @apply text-4xl font-bold text-brand my-3;
+              }
+
+              .price-desc {
+                @apply text-sm text-gray-500 mb-6;
+              }
+
+              .price-btn {
+                @apply bg-success hover:bg-green-600 text-white
+                      px-5 py-2 cursor-pointer transition-colors duration-200;
+              }
+
+            }
+            </style>
+             <section class="bg-gray-200 py-16 px-10">
             <div class="max-w-5xl mx-auto text-center">
 
               <h2 class="text-4xl font-bold text-gray-900 mb-3">Get awesome features, without extra charges</h2>
