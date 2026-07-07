@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Yet Another App - Mohamed's Sections (Tailwind)</title>
+
+  <!--
+    ============================================================
+    TAILWIND CUSTOM COMPONENTS
+    Mohamed's two sections: "Why Us" + "Pricing"
+    These are reusable classes built with @apply so the HTML
+    stays clean and readable - exactly like the course teaches!
+    ============================================================
+  -->
+  <style type="text/tailwindcss">
+
+    @theme {
+      /* Custom brand colors matching the original style.css */
+      --color-brand: #4f46e5;       /* indigo - matches original accent */
+      --color-brand-dark: #4338ca;
+      --color-success: #22c55e;     /* green - matches original price-btn */
+    }
+
+    @layer components {
+
+      /* ---- WHY US SECTION ---- */
+      .whyus-icon {
+        @apply w-16 h-16 rounded-full mx-auto mb-4;
+      }
+
+      .whyus-card {
+        @apply flex flex-col items-center text-center max-w-[260px];
+      }
+
+      /* ---- PRICING SECTION ---- */
+      .pricing-card {
+        @apply bg-white flex flex-col items-center px-6 py-8 w-64
+               shadow-[0_0_0_1px_#d1d5db];
+      }
+
+      /* The highlighted middle card - lifted up with a colored top border */
+      .pricing-card--highlight {
+        @apply -translate-y-3 border-t-[6px] border-brand
+               shadow-[0_10px_20px_rgba(79,70,229,0.25)];
+      }
+
+      .price-tag {
+        @apply text-4xl font-bold text-brand my-3;
+      }
+
+      .price-desc {
+        @apply text-sm text-gray-500 mb-6;
+      }
+
+      .price-btn {
+        @apply bg-success hover:bg-green-600 text-white
+               px-5 py-2 cursor-pointer transition-colors duration-200;
+      }
+
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800">
+
+  <!-- ============================================================
+       WHY US SECTION
+       Original: .whyus / .whyus-grid / .whyus-item
+       Mohamed's section - starts here
+       ============================================================ -->
+  <section class="bg-gray-100 py-16 px-10">
+    <div class="max-w-5xl mx-auto text-center">
+
+      <h2 class="text-4xl font-bold text-gray-900 mb-3">Why you should choose our app</h2>
+      <p class="text-gray-500 mb-12">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet massa.
+      </p>
+
+      <!--
+        GRID:
+        grid-cols-1           = 1 column on mobile
+        sm:grid-cols-2        = 2 columns on tablet
+        lg:grid-cols-3        = 3 columns on desktop (same as original flex wrap)
+        gap-8                 = 2rem gap between cards
+      -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+
+        <!-- Fast Performance -->
+        <article class="whyus-card">
+          <!-- gradient circle icon - matches original .whyus-icon--speed -->
+          <div class="whyus-icon bg-gradient-to-br from-indigo-500 to-green-400"></div>
+          <h3 class="font-bold text-gray-900 mb-2">Fast performance</h3>
+          <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+
+        <!-- Secure by design -->
+        <article class="whyus-card">
+          <div class="whyus-icon bg-gradient-to-br from-sky-500 to-indigo-500"></div>
+          <h3 class="font-bold text-gray-900 mb-2">Secure by design</h3>
+          <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+
+        <!-- 24/7 support -->
+        <article class="whyus-card">
+          <div class="whyus-icon bg-gradient-to-br from-orange-400 to-yellow-300"></div>
+          <h3 class="font-bold text-gray-900 mb-2">24/7 support</h3>
+          <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+
+        <!-- Easy to use -->
+        <article class="whyus-card">
+          <div class="whyus-icon bg-gradient-to-br from-pink-500 to-purple-500"></div>
+          <h3 class="font-bold text-gray-900 mb-2">Easy to use</h3>
+          <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+
+        <!-- Scalable -->
+        <article class="whyus-card">
+          <div class="whyus-icon bg-gradient-to-br from-green-400 to-green-600"></div>
+          <h3 class="font-bold text-gray-900 mb-2">Scalable</h3>
+          <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+
+        <!-- Trusted by pros -->
+        <article class="whyus-card">
+          <div class="whyus-icon bg-gradient-to-br from-gray-500 to-gray-900"></div>
+          <h3 class="font-bold text-gray-900 mb-2">Trusted by pros</h3>
+          <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+  <!-- WHY US SECTION ends - Mohamed -->
+
+
+  <!-- ============================================================
+       PRICING SECTION
+       Original: .pricing / .pricing-cards / .pricing-card
+       Mohamed's section - starts here
+       ============================================================ -->
+  <section class="bg-gray-200 py-16 px-10">
+    <div class="max-w-5xl mx-auto text-center">
+
+      <h2 class="text-4xl font-bold text-gray-900 mb-3">Get awesome features, without extra charges</h2>
+      <p class="text-gray-500 mb-12">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet massa.
+      </p>
+
+      <!--
+        flex flex-wrap justify-center = same as original display:flex + justify-content:center
+        gap-8 = same as original gap: 30px
+        items-center = vertically aligns all cards to the middle baseline
+      -->
+      <div class="flex flex-wrap justify-center gap-8 items-center">
+
+        <!-- STARTER CARD -->
+        <article class="pricing-card">
+          <h3 class="font-bold text-gray-900 mb-2">Starter</h3>
+          <p class="price-tag">$0</p>
+          <p class="price-desc">Perfect to try our app.</p>
+          <button class="price-btn">Get started</button>
+        </article>
+
+        <!-- PRO CARD (highlighted - floats up with colored top border) -->
+        <article class="pricing-card pricing-card--highlight">
+          <h3 class="font-bold text-gray-900 mb-2">Pro</h3>
+          <p class="price-tag">$40</p>
+          <p class="price-desc">For growing teams.</p>
+          <button class="price-btn">Choose Pro</button>
+        </article>
+
+        <!-- ENTERPRISE CARD -->
+        <article class="pricing-card">
+          <h3 class="font-bold text-gray-900 mb-2">Enterprise</h3>
+          <p class="price-tag">$99</p>
+          <p class="price-desc">Advanced features &amp; support.</p>
+          <button class="price-btn">Talk to us</button>
+        </article>
+
+      </div>
+    </div>
+  </section>
+  <!-- PRICING SECTION ends - Mohamed -->
+
+</body>
+</html>
