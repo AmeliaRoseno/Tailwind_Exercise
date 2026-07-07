@@ -9,7 +9,33 @@
     <body>
       <header>
           <!-- nav bar starts-->
-          <!-- nav bar ends-->
+          <header class="bg-gray-500 px-6 py-4">
+           <div class="flex items-center justify-between">
+             <button class="bg-white text-sm px-4 py-2 rounded-sm shadow-sm">
+             Your cool product
+             </button>
+          
+             <nav class="hidden md:flex items-center gap-3">
+              <a href="#" class="bg-white text-sm px-4 py-2 rounded-sm shadow-sm">Home</a>
+              <a href="#" class="bg-white text-sm px-4 py-2 rounded-sm shadow-sm">Features</a>
+              <a href="#" class="bg-white text-sm px-4 py-2 rounded-sm shadow-sm">Prices</a>
+              <a href="#" class="bg-white text-sm px-4 py-2 rounded-sm shadow-sm">Try for free</a>
+              </nav>
+
+             <button id="menu-toggle" class="md:hidden flex flex-col justify-center items-center gap-1.5 w-9 h-9" aria-label="Toggle menu" aria-expanded="false">
+              <span class="block w-6 h-0.5 bg-white"></span>
+              <span class="block w-6 h-0.5 bg-white"></span>
+              <span class="block w-6 h-0.5 bg-white"></span>
+             </button>
+
+             <nav id="mobile-menu" class="md:hidden hidden flex-col gap-3 mt-4">
+              <a href="#" class="bg-white text-sm px-4 py-2 rounded-sm shadow-sm text-center">Home</a>
+              <a href="#" class="bg-white text-sm px-4 py-2 rounded-sm shadow-sm text-center">Features</a>
+              <a href="#" class="bg-white text-sm px-4 py-2 rounded-sm shadow-sm text-center">Prices</a>
+              <a href="#" class="bg-white text-sm px-4 py-2 rounded-sm shadow-sm text-center">Try for free</a>
+             </nav>
+            </div>
+            <!-- nav bar ends-->
       </header>
       <main>
 
@@ -28,6 +54,22 @@
             <!-- pricing ends -->
     </main>
         <!-- footer starts -->
+        <footer class="bg-gray-200 py-12 text-center">
+         <h2 class="text-xl mb-4">Your product</h2>
+ 
+          <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm mb-6 px-4">
+            <a href="#" class="hover:underline">Home</a>
+            <a href="#" class="hover:underline">Features</a>
+            <a href="#" class="hover:underline">Prices</a>
+          </nav>
+ 
+          <div class="flex flex-wrap justify-center gap-4 px-4">
+           <a href="#" class="w-9 h-9 rounded-full bg-gray-300 flex items-center justify-center text-xs">FB</a>
+           <a href="#" class="w-9 h-9 rounded-full bg-gray-300 flex items-center justify-center text-xs">IG</a>
+           <a href="#" class="w-9 h-9 rounded-full bg-gray-300 flex items-center justify-center text-xs">YT</a>
+           <a href="#" class="w-9 h-9 rounded-full bg-gray-300 flex items-center justify-center text-xs">LI</a>
+          </div>
+        </footer>
         <!-- footer ends -->
     </body>
 </html>
