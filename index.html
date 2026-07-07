@@ -1,20 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <title>Yet Another App - Mohamed's Sections (Tailwind)</title>
-
-  <!--
-    ============================================================
-    TAILWIND CUSTOM COMPONENTS
-    Mohamed's two sections: "Why Us" + "Pricing"
-    These are reusable classes built with @apply so the HTML
-    stays clean and readable - exactly like the course teaches!
-    ============================================================
-  -->
-  <style type="text/tailwindcss">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
 
     @theme {
       /* Custom brand colors matching the original style.css */
@@ -61,58 +51,72 @@
 
     }
   </style>
-</head>
-<body class="font-sans text-gray-800">
+  </head>
+  <body>
+    <body>
+      <header>
+          <!-- nav bar starts-->
+          <!-- nav bar ends-->
+      </header>
+      <main>
 
+        <h1>bla</h1>
+            <!-- hero starts-->
+            <!-- hero ends-->
+            <!-- TRUSTED BY SECTION starts -->
+            <!-- TRUSTED BY SECTION ends-->
+            <!-- video starts -->
+            <!-- video ends-->
+            <!-- AWESOME FEATURES SECTION starts -->
+            <!-- AWESOME FEATURES SECTION ends-->
+            <!-- why us starts -->
+            <!-- why us ends-->            
+            <!-- pricing starts -->
+            <section class="bg-gray-200 py-16 px-10">
+            <div class="max-w-5xl mx-auto text-center">
 
-  <!-- ============================================================
-       PRICING SECTION
-       Original: .pricing / .pricing-cards / .pricing-card
-       Mohamed's section - starts here
-       ============================================================ -->
-  <section class="bg-gray-200 py-16 px-10">
-    <div class="max-w-5xl mx-auto text-center">
+              <h2 class="text-4xl font-bold text-gray-900 mb-3">Get awesome features, without extra charges</h2>
+              <p class="text-gray-500 mb-12">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet massa.
+              </p>
 
-      <h2 class="text-4xl font-bold text-gray-900 mb-3">Get awesome features, without extra charges</h2>
-      <p class="text-gray-500 mb-12">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet massa.
-      </p>
+              <!--
+                flex flex-wrap justify-center = same as original display:flex + justify-content:center
+                gap-8 = same as original gap: 30px
+                items-center = vertically aligns all cards to the middle baseline
+              -->
+              <div class="flex flex-wrap justify-center gap-8 items-center">
 
-      <!--
-        flex flex-wrap justify-center = same as original display:flex + justify-content:center
-        gap-8 = same as original gap: 30px
-        items-center = vertically aligns all cards to the middle baseline
-      -->
-      <div class="flex flex-wrap justify-center gap-8 items-center">
+                <!-- STARTER CARD -->
+                <article class="pricing-card">
+                  <h3 class="font-bold text-gray-900 mb-2">Starter</h3>
+                  <p class="price-tag">$0</p>
+                  <p class="price-desc">Perfect to try our app.</p>
+                  <button class="price-btn">Get started</button>
+                </article>
 
-        <!-- STARTER CARD -->
-        <article class="pricing-card">
-          <h3 class="font-bold text-gray-900 mb-2">Starter</h3>
-          <p class="price-tag">$0</p>
-          <p class="price-desc">Perfect to try our app.</p>
-          <button class="price-btn">Get started</button>
-        </article>
+                <!-- PRO CARD (highlighted - floats up with colored top border) -->
+                <article class="pricing-card pricing-card--highlight">
+                  <h3 class="font-bold text-gray-900 mb-2">Pro</h3>
+                  <p class="price-tag">$40</p>
+                  <p class="price-desc">For growing teams.</p>
+                  <button class="price-btn">Choose Pro</button>
+                </article>
 
-        <!-- PRO CARD (highlighted - floats up with colored top border) -->
-        <article class="pricing-card pricing-card--highlight">
-          <h3 class="font-bold text-gray-900 mb-2">Pro</h3>
-          <p class="price-tag">$40</p>
-          <p class="price-desc">For growing teams.</p>
-          <button class="price-btn">Choose Pro</button>
-        </article>
+                <!-- ENTERPRISE CARD -->
+                <article class="pricing-card">
+                  <h3 class="font-bold text-gray-900 mb-2">Enterprise</h3>
+                  <p class="price-tag">$99</p>
+                  <p class="price-desc">Advanced features &amp; support.</p>
+                  <button class="price-btn">Talk to us</button>
+                </article>
 
-        <!-- ENTERPRISE CARD -->
-        <article class="pricing-card">
-          <h3 class="font-bold text-gray-900 mb-2">Enterprise</h3>
-          <p class="price-tag">$99</p>
-          <p class="price-desc">Advanced features &amp; support.</p>
-          <button class="price-btn">Talk to us</button>
-        </article>
-
-      </div>
-    </div>
-  </section>
-  <!-- PRICING SECTION ends - Mohamed -->
-
-</body>
+                </div>
+              </div>
+            </section>
+            <!-- pricing ends -->
+    </main>
+        <!-- footer starts -->
+        <!-- footer ends -->
+    </body>
 </html>
