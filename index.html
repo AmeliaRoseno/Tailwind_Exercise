@@ -1,20 +1,17 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
-
-<body>
-
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
   <body>
-    <header>
-      <!-- nav bar starts-->
-      <!-- nav bar ends-->
-    </header>
-    <main>
+    <body>
+      <header>
+          <!-- nav bar starts-->
+          <!-- nav bar ends-->
+      </header>
+      <main>
 
       <!-- bla was here -->
       <!-- hero starts-->
@@ -46,10 +43,43 @@
       </section>
       <!-- hero ends-->
       <!-- TRUSTED BY SECTION starts -->
+            <div class="flex flex-col gap-4 p-16 items-center">
+            <p class="text-center text-base"> Trusted by companies like:</p>
+            <section class="flex md:max-w-3/4 mx-auto flex-row gap-8 pl-24 pr-24">
+              <img class="flex-1 min-w-0" src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" alt="logo1">
+              <img class="flex-1 min-w-0" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/ABC_2021_Invert.svg/1920px-ABC_2021_Invert.svg.png" alt="logo2">
+              <img class="flex-1 min-w-0" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKOvfAJ8r7cRyG3i1CXRLWFACvptjKW6EKUzG3rpVnxA&s" alt="logo3">
+              <img class="flex-1 min-w-0" src="https://upload.wikimedia.org/wikipedia/commons/0/0e/ARMEDANGELS-A_Logo.jpg" alt="logo4">
+              <img class="flex-1 min-w-0" src="https://cdn.worldvectorlogo.com/logos/bmw-logo.svg" alt="logo5">
+            </section>
+            </div>
       <!-- TRUSTED BY SECTION ends-->
       <!-- video starts -->
       <!-- video ends-->
       <!-- AWESOME FEATURES SECTION starts -->
+            <section class="bg-violet-100 pt-16 pb-16">
+            <section class="pb-4">
+              <h2 class="text-3xl text-center pb-4">Our Okay-ish Features</h2>
+              <p class="text-sm text-center">From smart search to real-time sync, our tools work together so you can focus on what matters most.</p>
+            </section>
+            <section class="flex gap-4 p-4">
+            <div class="card bg-violet-300 rounded-lg p-4">
+              <h2 class="text-lg text-center pb-4">Smart Search</h2>
+              <img class="rounded-lg" src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="feature1">
+              <p class="text-sm pt-4">Quickly find exactly what you need with filters that adapt to your preferences in real time.</p>
+          </div>
+          <div class="card bg-violet-300 rounded-lg p-4">
+              <h2 class="text-lg text-center pb-4">Seamless Sync</h2>
+              <img class="rounded-lg" src="https://images.unsplash.com/photo-1513595207829-9f414c0665f6?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="feature1">
+              <p class="text-sm pt-4">Your data stays up to date across every device, automatically and without extra steps.</p>
+          </div>
+          <div class="card bg-violet-300 rounded-lg p-4">
+            <h2 class="text-lg text-center pb-4">Custom Dashboards</h2>
+            <img class="rounded-lg" src="https://images.unsplash.com/photo-1609921141835-710b7fa6e438?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="feature3">
+            <p class="text-sm pt-4">Build a workspace that fits the way you work, with widgets you can rearrange anytime.</p>
+          </div>
+        </section>
+        </section>
       <!-- AWESOME FEATURES SECTION ends-->
       <!-- why us starts -->
       <section id="whyUs-section" class="flex flex-col items-center justify-center pt-6">
@@ -114,6 +144,96 @@
       </section>
       <!-- why us ends-->
       <!-- pricing starts -->
+
+            <style type="text/tailwindcss">
+
+            @theme {
+              /* Custom brand colors matching the original style.css */
+              --color-brand: #4f46e5;       /* indigo - matches original accent */
+              --color-brand-dark: #4338ca;
+              --color-success: #22c55e;     /* green - matches original price-btn */
+            }
+
+            @layer components {
+
+              /* ---- WHY US SECTION ---- */
+              .whyus-icon {
+                @apply w-16 h-16 rounded-full mx-auto mb-4;
+              }
+
+              .whyus-card {
+                @apply flex flex-col items-center text-center max-w-[260px];
+              }
+
+              /* ---- PRICING SECTION ---- */
+              .pricing-card {
+                @apply bg-white flex flex-col items-center px-6 py-8 w-64
+                      shadow-[0_0_0_1px_#d1d5db];
+              }
+
+              /* The highlighted middle card - lifted up with a colored top border */
+              .pricing-card--highlight {
+                @apply -translate-y-3 border-t-[6px] border-brand
+                      shadow-[0_10px_20px_rgba(79,70,229,0.25)];
+              }
+
+              .price-tag {
+                @apply text-4xl font-bold text-brand my-3;
+              }
+
+              .price-desc {
+                @apply text-sm text-gray-500 mb-6;
+              }
+
+              .price-btn {
+                @apply bg-success hover:bg-green-600 text-white
+                      px-5 py-2 cursor-pointer transition-colors duration-200;
+              }
+
+            }
+            </style>
+             <section class="bg-gray-200 py-16 px-10">
+            <div class="max-w-5xl mx-auto text-center">
+
+              <h2 class="text-4xl font-bold text-gray-900 mb-3">Get awesome features, without extra charges</h2>
+              <p class="text-gray-500 mb-12">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet massa.
+              </p>
+
+              <!--
+                flex flex-wrap justify-center = same as original display:flex + justify-content:center
+                gap-8 = same as original gap: 30px
+                items-center = vertically aligns all cards to the middle baseline
+              -->
+              <div class="flex flex-wrap justify-center gap-8 items-center">
+
+                <!-- STARTER CARD -->
+                <article class="pricing-card">
+                  <h3 class="font-bold text-gray-900 mb-2">Starter</h3>
+                  <p class="price-tag">$0</p>
+                  <p class="price-desc">Perfect to try our app.</p>
+                  <button class="price-btn">Get started</button>
+                </article>
+
+                <!-- PRO CARD (highlighted - floats up with colored top border) -->
+                <article class="pricing-card pricing-card--highlight">
+                  <h3 class="font-bold text-gray-900 mb-2">Pro</h3>
+                  <p class="price-tag">$40</p>
+                  <p class="price-desc">For growing teams.</p>
+                  <button class="price-btn">Choose Pro</button>
+                </article>
+
+                <!-- ENTERPRISE CARD -->
+                <article class="pricing-card">
+                  <h3 class="font-bold text-gray-900 mb-2">Enterprise</h3>
+                  <p class="price-tag">$99</p>
+                  <p class="price-desc">Advanced features &amp; support.</p>
+                  <button class="price-btn">Talk to us</button>
+                </article>
+
+                </div>
+              </div>
+            </section>
       <!-- pricing ends -->
     </main>
     <!-- footer starts -->
